@@ -1,0 +1,280 @@
+/* =====================
+   ROOT VARIABLES
+===================== */
+:root {
+  --primary: #6c63ff;
+  --secondary: #00c9a7;
+  --dark: #020617;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+}
+
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(120deg, #020617, #0f172a);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Subtle premium background glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(108,99,255,0.18), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(0,201,167,0.15), transparent 40%);
+  z-index: -1;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero-tagline {
+  margin-top: 12px;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.hero-buttons {
+  margin-top: 35px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(108, 99, 255, 0.35);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(108, 99, 255, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--primary);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+/* Section divider */
+.section-divider {
+  width: 80%;
+  height: 1px;
+  margin: 0 auto;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+
+/* =====================
+   ABOUT
+===================== */
+.about p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--text);
+}
+
+/* =====================
+   CARDS
+===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 18px;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Accent line on hover */
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  transition: 0.4s ease;
+}
+
+.card:hover::after {
+  width: 100%;
+}
+
+/* =====================
+   SKILLS
+===================== */
+.skills {
+  text-align: center;
+}
+
+.skills span {
+  display: inline-block;
+  margin: 8px 6px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(108, 99, 255, 0.12);
+  border: 1px solid rgba(108, 99, 255, 0.35);
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* =====================
+   PROJECTS
+===================== */
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* =====================
+   CONTACT
+===================== */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  margin: 12px 18px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.contact a:hover {
+  color: var(--secondary);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #020617;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 60px 18px;
+  }
+}

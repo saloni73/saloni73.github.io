@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saloni Sharma | Java Backend Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Saloni Sharma</h1>
+    <p class="hero-tagline">
+      Java Backend Developer • MCA Graduate • Building REST APIs with Java & Spring Boot
+    </p>
+
+    <div class="hero-buttons">
+      <a href="resume/Saloni_Java_developer_Resume.pdf" target="_blank" class="btn">
+        👀 View Resume
+      </a>
+      <a href="#projects" class="btn btn-outline">
+        🚀 View Projects
+      </a>
+    </div>
+
+    <!-- QUICK STATS -->
+    <div class="hero-stats fade-in">
+      <div>
+        <b>3+</b>
+        <span>Backend Projects</span>
+      </div>
+      <div>
+        <b>Java</b>
+        <span>Primary Skill</span>
+      </div>
+      <div>
+        <b>MCA</b>
+        <span>Computer Applications</span>
+      </div>
+    </div>
+
+    <p class="open-to-work">
+      📍 Open to Java Backend Developer roles • Immediate Joiner
+    </p>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about fade-in">
+    <h2>Professional Summary</h2>
+    <p>
+      Java Backend Developer and MCA graduate with hands-on experience in building
+      backend and web applications using <b>Java, Spring Boot, JDBC, Hibernate, and RESTful APIs</b>.
+      Strong understanding of <b>OOP principles, SQL, MVC architecture, and database-driven systems</b>.
+      Experienced in CRUD operations, API integration, validation, and exception handling.
+      Actively seeking an <b>entry-level Java / Backend Developer</b> opportunity.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="fade-in">
+    <h2>Technical Skills</h2>
+    <div class="card skills">
+      <span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>JDBC</span>
+      <span>REST APIs</span><span>MySQL</span><span>PostgreSQL</span>
+      <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      <span>Git</span><span>GitHub</span><span>Maven</span>
+      <span>Postman</span><span>Apache Tomcat</span>
+      <span>OOP</span><span>MVC</span><span>SDLC</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+
+      <div class="card fade-in">
+        <div class="project-title">🌦 Weather Application</div>
+        <p>
+          Built a real-time weather application using REST APIs to fetch and display
+          temperature, humidity, and weather conditions with JSON parsing.
+        </p>
+        <p><b>Tech Stack:</b> Java, Spring Boot, REST API, JSON</p>
+      </div>
+
+      <div class="card fade-in">
+        <div class="project-title">🏥 MedTech Patient Management System</div>
+        <p>
+          Developed a backend healthcare system with patient, doctor, appointment,
+          and treatment modules using CRUD operations and exception handling.
+        </p>
+        <p><b>Tech Stack:</b> Java, JDBC, MySQL</p>
+      </div>
+
+      <div class="card fade-in">
+        <div class="project-title">📚 Library Management System</div>
+        <p>
+          Built a role-based backend system with authentication, book management,
+          and MVC architecture using Hibernate ORM.
+        </p>
+        <p><b>Tech Stack:</b> Java, Hibernate, MySQL</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="fade-in">
+    <h2>Education</h2>
+    <div class="card">
+      <p><b>MCA (2023 – 2025)</b><br>Greater Noida Institute of Technology (GNIOT)</p><br>
+      <p><b>B.Sc Computer Science (2020 – 2023)</b><br>Vardhman College, Bijnor</p>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section class="fade-in">
+    <h2>Training & Certifications</h2>
+    <div class="card">
+      <p><b>Advanced Java Training</b> – Anudip Foundation (Jul 2024 – Oct 2024)</p>
+      <p><b>Student Development Program (C & C++)</b> – IIT Kanpur (Jul 2024 – Aug 2024)</p>
+      <p>Advanced Diploma in Computer Applications</p>
+      <p>Basics of HTML and CSS</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact fade-in">
+    <h2>Contact</h2>
+    <a href="mailto:saloniparashar0073@gmail.com">📧 Email</a>
+    <a href="https://www.linkedin.com/in/salonimca" target="_blank">💼 LinkedIn</a>
+    <a href="https://github.com/saloni73" target="_blank">🐙 GitHub</a>
+  </section>
+
+  <footer>
+    © 2026 Saloni Sharma • Java Backend Developer
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
